@@ -2,8 +2,6 @@
 
 const todoReducer = (state, action) => {
     switch (action.type) {
-        case 'POPULATE_LIST':
-            return action.list;
         case 'ADD_TODO':
             return [
                 ...state,
