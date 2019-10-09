@@ -28,6 +28,15 @@ const TodoList = () => {
         setTitle('');
     }
 
+    const removeTodo = (title) => {
+
+        // * DISPATCH REMOVE TITLE OF SELECTED TODO
+        todoListDispatch({
+            type: 'REMOVE_TODO',
+            title
+        })
+    }
+
     return (
         <>
             <h1>Something Here</h1>
@@ -51,6 +60,7 @@ const TodoList = () => {
                         <li key={key}>
                             <h2>{item.title}</h2>
                             <p>{item.description}</p>
+                            <button onClick={() => removeTodo(item.title)}>x</button>
                         </li>
                     )
                 }
