@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+/* 
+  * STYLES FOR LI ELEMENTS
+*/
+
+li {
+  display: inline-block;
+  width: 50%;
+  list-style: none;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+form > input {
+  margin: 0 0.5rem;
+  border: 1px solid #282c34;
+}
+
+form > button {
+  border: 1px solid #282c34;
+  padding: 0 0.5rem;
+}
+
+li>button {
+  border: none;
+  background-color: #0DD3AC;
+  border-bottom: 1.5px solid #272C34;
+  padding: 0.2rem 0.8rem;
+  margin: 0.5rem;
+}
+
+li:hover,
+li>button:hover {
+  cursor: pointer;
+}
+
+.completed {
+  color: #0DD3AC;
+  background-color: #272C34;
+  border-bottom: 3px solid #0DD3AC;
+}
+
+/* 
+  * END OF STYLES FOR LI ELEMENTS
+*/
