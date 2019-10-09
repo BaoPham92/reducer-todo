@@ -8,9 +8,9 @@ const TodoForm = ({
     setTitle
  }) => (
     <form onSubmit={addTodo}>
-        <input value={title} onChange={(e) => setTitle(e.target.value)} />
-        <input value={description} onChange={(e) => setDescription(e.target.value)} />
-        <button>add note</button>
+        <input value={title} placeholder={`Todo Title Here`} required={true} onChange={(e) => setTitle(e.target.value)} />
+        <input value={description} placeholder={`Todo Description Here`} required={true} onChange={(e) => setDescription(e.target.value)} />
+        <button>Add Todo</button>
     </form>
 )
 

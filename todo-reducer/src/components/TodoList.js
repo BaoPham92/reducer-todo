@@ -37,9 +37,14 @@ const TodoList = () => {
         })
     }
 
+    const isCompleted = () => {
+        // * DISPATCH ACTION FOR WETHER A TODO IS COMPLETED
+        todoListDispatch({ type: 'TOGGLE_TODO' })
+    }
+
     return (
         <>
-            <h1>Something Here</h1>
+            <h1>Add Todos</h1>
 
             {/* // * TODO FORM COMPONENT
              */}
@@ -57,7 +62,11 @@ const TodoList = () => {
                     todoList.length > 0
                     &&
                     todoList.map((item, key) =>
-                        <li key={key}>
+                        <li
+                            key={key}
+                            onClick={() => isCompleted()}
+                            className={!!item.class !== false && item.class}
+                        >
                             <h2>{item.title}</h2>
                             <p>{item.description}</p>
                             <button onClick={() => removeTodo(item.title)}>x</button>
